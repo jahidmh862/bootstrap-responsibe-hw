@@ -1,0 +1,359 @@
+/* 
+Template name:My folio
+Author:md jahid hasan
+Version: 1.0.0
+Author url: jani nah=
+UI Designer: taw jani nah=
+Discription:===
+
+Table of ::content
+--------------------- 
+1 ; Nav section,
+2 ; Banner section,
+3 ; About section,
+4 ; Service section,
+5 ; My work section,
+6 ; Contact section &
+7 ; Footer section.
+~~~~~~~~~~~~~~~~~~~~
+*/
+
+/* Common Css start */
+:root{
+    --primary_color: #02918b;
+    --secondary_color: #cfc91d;
+    --text_white:rgb(235, 235, 235);
+    --text_color:#738287;
+}
+
+body.darkmode{
+    --primary_color: #43585c;
+    --secondary_color: #1e7c78;
+    --text_color : #295763;
+    --text_white:rgb(190, 188, 188);
+}
+body{
+    font-family:'Open Sans', sans-serif;
+    background:var(--text_white);
+}
+.section_info{
+    color: var(--text_color);
+}
+.section_info h2{
+    font-size: 46px;
+    font-weight: 800px;
+    text-transform: uppercase;
+    color: var(--primary_color);
+}
+.section_info p span{
+    font-size: 23px;
+}
+
+h1,h2,h3,h4,h5,h6,span,ol,ul,p,small{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style-type:none;
+}
+a{
+    text-decoration:none;
+}
+/* Common Css end */
+
+
+/* Navbar section start */
+
+/* Preloader section */
+#preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+/* navbar scroll */
+#nav.active{
+    z-index: 9999;
+    width: 100%;
+    position: fixed;
+    animation: menu_fixed .5s;
+  }
+@keyframes menu_fixed {
+    from{
+        top: 100px;
+    }
+    to{
+        top: 0;
+    }
+}
+#nav{
+    background: var(--primary_color);
+}
+#nav ul li a{
+    color: var(--text_white);
+    font-weight: 800;
+    font-size: 12px;
+    transition: .5s;
+    text-transform: uppercase;
+}
+#nav ul li a:hover{
+    background-color: rgb(219, 219, 52);
+    border-radius: 10px;
+    color: rgb(1, 50, 50);
+    transition: .3s;
+}
+/* Navbar section end */
+
+
+/* Banner section start */
+#banner{
+    background-image: url(../image/img.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 728px;
+    color: aliceblue;
+    position: relative;
+    z-index: 1;
+}
+#banner::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.70;
+    z-index: -1;
+}
+#banner .banner_content h3{
+    font-size: 30px;
+    font-weight: 400;
+}
+#banner .banner_content h1{
+    font-size: 68px;
+    font-weight: 800;
+    letter-spacing: 30px;
+    text-transform: uppercase;
+}
+#banner .banner_content p{
+    font-size: 18px;
+}
+#banner img{
+    margin: 50px auto;
+}
+#banner a{
+    display: inline-block;
+    color:#0b1016;
+    font-size: 24px;
+    background-color:var(--secondary_color);
+    padding: 17px 40px;
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: .4s;
+}
+#banner .banner_content a:hover{
+    color:var(--primary_color);
+    border-radius: 15px;
+    transition: .3s;
+}
+#banner .banner_content img{
+    padding: 50px auto;
+}
+/* Banner section end */
+
+
+/* About section start */
+#about .section_info{
+    padding: 98px 0;
+}
+.about_item{
+    border-right: 1px solid #d9dbdb;
+    margin-bottom:90px ;
+}
+.about_item:last-child{
+    border-right: none;
+}
+.about_item i{
+    color: var(--secondary_color);
+    font-size: 25px;
+}
+.about_item h3{
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text_color);
+    padding: 29px 0;
+
+}
+.about_item p{
+    padding: 24px;
+    font-size: 12px;
+    color: var(--text_color);
+}
+/* About section end */
+
+
+/* Service section start */
+#service{
+    background-image: url(../image/MYFOLIO\ \(1\).png);
+    background-position: center;
+    background-size: cover;
+    padding: 70px 0px;
+    margin-bottom: 50px;
+}
+#service p{
+    padding-top: 12px;
+}
+#service h2{
+    padding-bottom: 20px;
+}
+.service_item{
+    padding-top: 80px;
+}
+.service_item i{
+    color:var(--primary_color);
+    font-size: 25px;
+}
+.service_item h3{
+    font-size: 16px;
+    padding: 17px 0;
+    color: #acaeae;
+}
+.service_item p{
+    padding-right: 30px;
+    font-size: 12px;
+    color: var(--text_color);
+}
+/* Service section end */
+
+
+/* Mywork section start */
+#mywork{
+    margin: 50px 0;
+}
+#mywork h2{
+    padding: 26px 0;
+}
+#mywork p{
+    padding-bottom: 16px;
+}
+.work_item img{
+    width: 100%;
+    display: block;
+}
+#mywork .work_item{
+    position: relative;
+}
+.work_item .overly div h3{
+    font-size: 16px;
+    font-weight: 800;
+    padding-bottom: 10px;
+}
+.work_item .overly div{
+    padding: 10px;
+}
+#mywork .work_item .overly{
+    position: absolute;
+    top: 20px;
+    left: 28px;
+    right: 28px;
+    bottom: 20px;
+    background: rgba(2, 145,139,0.85);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+#mywork .work_item:hover .overly{
+    opacity: 1;
+    visibility: visible;
+}
+/* Mywork section end */
+
+
+/* Contact section start */
+.contact_from{
+    background: #0a0a0b;
+    margin-top:30px ;
+}
+
+.contact_from .row input,
+.contact_form .row input{
+    color: var(--text_color);
+    font-size: 16px;
+    padding: 15px 20px;
+    margin-bottom: 50px;
+    margin: auto;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #7e8287;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contact_from .w-100{
+    background:none;
+    color: var(--text_color);
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 1px solid #7e8287;
+    font-size: 16px;
+}
+
+/* .contact_form .col-12 .btn{
+    color: wheat;
+}
+
+.contact_form button{
+    color:#1276f1d9;
+    font-size: 14px;
+    background-color: var(--primary_color);
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+} */
+/* Contact section end */
+
+/* footer section start */
+footer{
+    font-size: 12px;
+    text-align: center;
+    background-color: #000;
+    text-transform: uppercase;
+    color: var(--text_color);
+    padding: 15px;
+    margin-top: 0;
+}
+/* footer section end */
+
+
+/* css start for top arrow button */
+#for_top {
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+    background:var(--primary_color);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 20px auto;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: aliceblue;
+    display: none;
+}
+/* css end for top arrow button */
