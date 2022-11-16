@@ -64,7 +64,61 @@
         border-right:none;
     }
 }
-/* 
+ 
 @media (max-width:575.98px){
-
-} */
+#banner .banner_content h1 {
+    font-size: 35px;
+    letter-spacing: 10px;
+}
+    #banner .banner_content p {
+    font-size: 11px;
+}
+    #banner .banner_content h3 {
+    font-size: 19px;
+    font-weight: 400;
+}
+    #banner a {
+    padding: 12px 15px;
+    letter-spacing: 2px;
+}
+    #banner img {
+    margin: 16px auto;
+}
+    #banner {
+    height: 420px;
+}
+    #banner .banner_content h1 {
+    font-size: 22px;
+    letter-spacing: 8px;
+}
+    #banner .banner_content h3 {
+    font-size: 14px;
+}
+    #banner .banner_content p {
+    font-size: 9px;
+}
+    #banner a {
+    padding: 10px 12px;
+    letter-spacing: 1px;
+}
+    .contact_from button {
+    font-size: 14px;
+    padding: 12px 30px;
+} 
+    .section_info h2 {
+    font-size: 30px;
+}
+    .about_item{
+        border: none;
+}
+    #about .section_info {
+    padding: 50px 0;
+}
+    .about_item {
+    margin-bottom: 0px;
+}
+    .about_item h3 {
+    padding: 0px 0;
+}
+    
+}
